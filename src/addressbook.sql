@@ -1,0 +1,17 @@
+create database address;
+use address;
+create table addressbook (firstname varchar(50),lastname varchar(50),address varchar(100),city varchar(20),zip int,phonenumber long ,email varchar(100));
+desc addressbook;
+insert into addressbook (firstname,lastname,address,city,zip,phonenumber,email) values ('kunal','batham','geetapuram colony ','farrukhabad',209601,9555425146,'kunalbatham15@gmail.com');
+insert into addressbook (firstname,lastname,address,city,zip,phonenumber,email) values ('rohit','kumar',' colony ','noida',209890,9344254343,'rohit@gmail.com');
+insert into addressbook (firstname,lastname,address,city,zip,phonenumber,email) values ('nikhil','soni','durga street ','delhi',209133,6546656566,'nikhilsoni5@gmail.com');
+select * from addressbook ;
+update addressbook set firstname ="Shiv" where firstname ='rohit';
+delete from addressbook where firstname='Shiv';
+select * from addressbook where city='farrukhabad';
+select count(*) from addressbook;
+select *from addressbook order by firstname ;
+alter Table addressbook add addressbookname varchar(30);
+alter Table addressbook add type varchar(30);
+update addressbook set addressbookname='addressbook1' ,type='friend'where firstname='nikhil';
+select count(phonenumber) from addressbook;
